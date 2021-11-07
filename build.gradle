@@ -15,7 +15,6 @@ repositories {
 
 dependencies {
     // This dependency is used by the application.
-//    implementation 'com.google.guava:guava:25.0-jre'
     implementation 'org.seleniumhq.selenium:selenium-java:4.0.0'
     implementation 'org.seleniumhq.selenium:selenium-remote-driver:4.0.0'
     implementation 'io.github.bonigarcia:webdrivermanager:5.0.2'
@@ -23,6 +22,16 @@ dependencies {
     implementation 'com.google.oauth-client:google-oauth-client-jetty:1.32.1'
     implementation 'com.google.apis:google-api-services-gmail:v1-rev20210614-1.32.1'
     implementation 'com.google.api-client:google-api-client-gson:1.32.2'
+
+
+    // logging
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+    testCompileOnly 'org.projectlombok:lombok:1.18.22'
+    implementation 'org.slf4j:slf4j-api:1.7.32'
+    testImplementation 'ch.qos.logback:logback-classic:1.2.6'
+
+
+
 
     // Use JUnit test framework and Hamcrest lib
     testImplementation 'junit:junit:4.12'
