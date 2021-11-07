@@ -48,6 +48,8 @@ public class MainPage extends BasePage {
     private WebElement listOfFoundSellEvents;
     @FindBy(xpath = "//span[@class='css-qim361 egdwx2f2'][1]")
     private List<WebElement> deleteSellEvents;
+    @FindBy(xpath = "//button[text()='Previous']")
+    private WebElement previousButton;
 
     public MainPage(WebDriver driver) {
         super(driver);
@@ -118,6 +120,7 @@ public class MainPage extends BasePage {
         waitElementToAppear(eventToSellTicketSelected);
         waitElementToBeClickable(eventTypeToSellTicket).click();
         waitElementToBeClickable(continueSellButton).click();
+        waitElementToAppear(previousButton);
     }
 
     public void deleteSellEventsFromPage() {

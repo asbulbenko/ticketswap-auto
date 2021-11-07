@@ -28,7 +28,7 @@ public class BaseTest {
 
 
     @Before
-    public void before() throws InterruptedException {
+    public void before() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setHeadless(false);
@@ -48,7 +48,7 @@ public class BaseTest {
         driver.quit();
     }
 
-    public void loginViaEmailAddress() throws InterruptedException {
+    public void loginViaEmailAddress() {
         // Open login form and send magicLink to email address
         homePage = new HomePage(driver);
         homePage.openLoginForm();
